@@ -141,11 +141,12 @@ public class SecondDayFunctionDemoTest {
         LocalDate date1 = currentTime.toLocalDate();
         System.out.println("date1: " + date1);
 
-        Month month = currentTime.getMonth().firstMonthOfQuarter();
+        int year = currentTime.getYear();
+        int month = currentTime.getMonthValue();
         int day = currentTime.getDayOfMonth();
         int seconds = currentTime.getSecond();
 
-        System.out.println("月: " + month +", 日: " + day +", 秒: " + seconds);
+        System.out.println("年: " + year +",月: " + month +", 日: " + day +", 秒: " + seconds);
 
         LocalDateTime date2 = currentTime.withDayOfMonth(10).withYear(2012);
         System.out.println("date2: " + date2);
