@@ -1,0 +1,6 @@
+
+Jsquid:S1191"5Use classes from the Java API instead of Sun classes.(ŠíË’
+\squid:S2094"BRemove this empty class, write its code or make it an "interface".(¯š…•ÿÿÿÿÿ
+psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ê¾ÞØ
+Rsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+Rsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ

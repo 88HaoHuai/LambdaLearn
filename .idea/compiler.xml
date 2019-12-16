@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="LambdaLearn" />
         <module name="learn" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="learn" target="1.8" />
+      <module name="LambdaLearn" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
