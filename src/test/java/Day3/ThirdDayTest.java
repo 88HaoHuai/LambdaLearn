@@ -3,7 +3,10 @@ package Day3;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.*;
 
@@ -37,5 +40,24 @@ public class ThirdDayTest {
         list.stream()
                 .filter(s -> !s.equals(s=0))
                 .forEach(System.out::println);
+    }
+
+    @Test
+    public void test2() throws Exception {
+        System.out.println("=======================外部迭代=========================");
+        List<Integer> list = Arrays.asList(1, 2, 1, 3, 3, 2, 4);
+        for (Integer integer : list) {
+            System.out.println(integer);
+        }
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println("=======================内部迭代=========================");
+        Stream<Integer> stream = list.stream().filter(i -> {
+            System.out.println("内部迭代惰性求值");
+            return i % 2 == 0;
+        });
+        stream.forEach(System.out::println);//只有执行终止操作的时候才会真正执行中间操作(惰性求值)
     }
 }
