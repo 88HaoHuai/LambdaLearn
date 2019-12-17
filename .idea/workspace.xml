@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dcca163-d01f-4b31-9972-a001e6df6bb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Day3/ThirdDay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Day3/ThirdDayTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -911,8 +909,16 @@
       <updated>1576421091520</updated>
       <workItem from="1576421095010" duration="6558000" />
       <workItem from="1576502999793" duration="6750000" />
-      <workItem from="1576589498230" duration="2831000" />
+      <workItem from="1576589498230" duration="2890000" />
     </task>
+    <task id="LOCAL-00001" summary="Day3">
+      <created>1576598185445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576598185445</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -948,7 +954,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29929000" />
+    <option name="totallyTimeSpent" value="29988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1909" y="-11" width="1942" height="1042" extended-state="6" />
@@ -984,6 +990,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Day3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
