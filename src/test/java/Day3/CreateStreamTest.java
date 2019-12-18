@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -56,16 +57,6 @@ public class CreateStreamTest {
      */
     @Test
     public void test1() throws Exception {
-        Stream<Integer> integerStream = Arrays.stream(new Integer[]{1, 2, 1, 3, 3, 2, 4});
-
-        // Stream 只能遍历一次
-//        integerStream.filter(i -> i % 2 == 0).forEach(System.out::println);
-//        System.out.println("================================================");
-//        integerStream.filter(i -> i % 2 == 0).distinct().forEach(System.out::println);
-//        System.out.println("================================================");
-//        integerStream.distinct().limit(2).forEach(System.out::println);
-//        System.out.println("================================================");
-//        integerStream.distinct().skip(2).forEach(System.out::println);
 
         Arrays.asList(1, 2, 1, 3, 3, 2, 4).stream().filter(i -> i % 2 == 0).forEach(System.out::println);
         System.out.println("================================================");
@@ -74,6 +65,20 @@ public class CreateStreamTest {
         Arrays.asList(1, 2, 1, 3, 3, 2, 4).stream().distinct().limit(2).forEach(System.out::println);
         System.out.println("================================================");
         Arrays.asList(1, 2, 1, 3, 3, 2, 4).stream().distinct().skip(2).forEach(System.out::println);
+
+        /**
+         * Java 8 Stream 流的重用
+         */
+        Integer[] integers = {1, 2, 1, 3, 3, 2, 4};
+        Supplier<Stream<Integer>> streamSupplier = () -> Stream.of(integers);
+        streamSupplier.get().filter(i -> i % 2 == 0).forEach(System.out::println);
+        System.out.println("================================================");
+        streamSupplier.get().filter(i -> i % 2 == 0).distinct().forEach(System.out::println);
+        System.out.println("================================================");
+        streamSupplier.get().distinct().limit(2).forEach(System.out::println);
+        System.out.println("================================================");
+        streamSupplier.get().distinct().skip(2).forEach(System.out::println);
+
     }
 
     /**
